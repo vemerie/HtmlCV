@@ -39,7 +39,7 @@
                 <p>
                   <b>Iyanu LLC, <i>Lagos — Frontend Developer</i></b>
                 </p>
-                <small>November2018 - PRESENT </small>
+                <small>November 2018 - PRESENT </small>
                 <p>
                   I work here as a software developer; focusing on converting
                     UI designs into web pages using Html,Css and Javascript
@@ -89,11 +89,11 @@
             <section>
               <h4><u>SKILLS</u></h4>
               <b>FRONT END SKILLS</b><br />
-              Html,Css,Javascript,Bootstrap,Sass,Angular.<br />
+              Html,Css,Javascript,Bootstrap,Sass,Angular,Reactjs.<br />
               <p></p>
 
               <b> BACKEND SKILLS</b><br />
-              Familiar with PHP/Laravel,Python, MYSQL.<br />
+              Familiar with PHP/Laravel,Python,Nodejs MYSQL.<br />
               <p></p>
 
               <b>TOOLS</b><br />
@@ -117,5 +117,66 @@
             </section>
           </aside>
     </div>
+    <div class="contact">
+      <h3 style="text-align: center;">
+        Contact Me
+      </h3>
+      <form onsubmit = "return(validate())" name = "myForm">
+<ul class="form-style-1">
+    <li><label>Full Name <span class="required" >*</span></label>
+      <input type="text" name="first" class="field-divided" placeholder="First name" required />
+          <small id="first1" style="color:red;"></small>
+ 
+      <input type="text" name="last" class="field-divided" placeholder="Last name" required />
+    <small id="last1" style="color:red;"></small>
+
+    </li>
+    <li>
+        <label>Email <span class="required"required>*</span></label>
+        <input type="email" name="email" required class="field-long" />
+    </li>
+    <li>
+        <label>Title</label>
+        <input type="text" name="title" class="field-select">
+    </li>
+    <li>
+        <label>Your Message <span class="required">*</span></label>
+        <textarea name="message" id="message" class="field-long field-textarea" required></textarea>
+    <small id="message1" style="color:red;"></small>
+    </li>
+    <li>
+        <input type="submit" value="Submit" />
+    </li>
+</ul>
+</form>
+    </div>
+    <script>
+      function validate() {
+      
+         if( document.myForm.message.value == "" || !isNaN( document.myForm.message.value ) ||
+            document.myForm.message.value.length < 20 ) {
+            document.getElementById('message1').innerHTML="message must not be less than 20 characters";
+            document.myForm.message.focus() ;
+            return false;
+         }
+         if( document.myForm.first.value == "" || !isNaN( document.myForm.first.value ) ||
+            document.myForm.first.value.length < 4 ) {
+            document.getElementById('first1').innerHTML="Field must be more than four(4) characters";
+
+            document.myForm.first.focus() ;
+            return false;
+         }
+         if( document.myForm.last.value == "" || !isNaN( document.myForm.last.value ) ||
+            document.myForm.last.value.length < 4 ) {
+
+            document.getElementById('last1').innerHTML="Field must be more than four(4) characters";
+            // alert( "Name must be string and must be more than four(4) characters" );
+            document.myForm.first.focus() ;
+            return false;
+         }
+         return( true );
+      }
+   //-->
+    </script>
   </body>
 </html>
