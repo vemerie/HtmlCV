@@ -1,0 +1,63 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color:#fee;
+	margin: 0px;
+	padding:0px;
+	width:100%;
+}
+:root{
+   --CV_COLOR:#7755aa;
+}
+
+
+p{
+/*	font-size: calc(10px-30*(100vw-3vw)/800);
+*/
+font-size:15px;
+line-height: 2;
+}
+h1{
+	font-size: 50px;
+	font-weight: 700;
+	color: var(--CV_COLOR);
+}
+h4{
+	color: var(--CV_COLOR);
+}
+
+.flex-container{
+	min-height:1000px; 
+	padding:3em;
+	display:flex;
+	flex-flow: row wrap;
+}
+
+
+main{
+	flex:3 0 0;
+	padding: 2em;
+}
+
+
+aside{
+	flex:1 0 0;
+	margin-left:5rem;
+	margin-top: 1rem;
+	padding:0px 1em; 
+}
+aside address{
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+aside section{
+	line-height: 2;
+	font-size: 13px;
+}
+
+aside img{
+	width:180px;
+	border-radius:50%;
+	object-fit: cover;
+	border: .5em solid var(--CV_COLOR);
+}
